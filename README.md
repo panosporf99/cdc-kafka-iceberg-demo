@@ -14,7 +14,7 @@ flowchart LR
   DBZ -->|Debezium JSON| K[Kafka Topic\npg.public.customers]
   K --> S[PySpark Structured Streaming]
   S --> I[Iceberg Table\nlocal.demo.customers]
-  I --> Q[Queries (spark-sql/Trino/DuckDB)]
+  I --> Q[Queries (spark sql/Trino/DuckDB)]
 ```
 
 ```mermaid
