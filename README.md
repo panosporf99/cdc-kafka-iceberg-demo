@@ -15,7 +15,7 @@ flowchart LR
   K --> S[PySpark Structured Streaming]
   S --> I[Iceberg Table\nlocal.demo.customers]
   I --> Q[Queries (spark-sql/Trino/DuckDB)]
-mermaid
+```
 
 ```mermaid
 sequenceDiagram
@@ -32,10 +32,8 @@ sequenceDiagram
     K-->>SP: micro-batch of events
     SP->>IC: MERGE (upsert/delete)
   end
+```
 Repo structure
-bash
-mermaid
-
 .
 ├─ docker-compose.yml            # zookeeper, kafka, connect (debezium), postgres
 ├─ init.sql                      # seeds public.customers
