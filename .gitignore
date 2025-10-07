@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Spark / Ivy caches
+.metastore/
+metastore_db/
+metastore_db_sql/
+spark-warehouse/
+.derby.log
+ivy2/
+.cache/
+*.log
+
+# Spark checkpoints & Iceberg data (optional ignore for repo)
+iceberg-checkpoints/
+iceberg-warehouse/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
