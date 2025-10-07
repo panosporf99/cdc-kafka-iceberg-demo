@@ -10,11 +10,11 @@ This repo shows a production-style pattern for **Change Data Capture (CDC)**:
 
 ```mermaid
 flowchart LR
-  PG[(Postgres\nlogical decoding)] -->|pgoutput| DBZ[Debezium / Kafka Connect]
-  DBZ -->|Debezium JSON| K[Kafka Topic\npg.public.customers]
-  K --> S[PySpark Structured Streaming]
-  S --> I[Iceberg Table\nlocal.demo.customers]
-  I --> Q[Queries (spark sql/Trino/DuckDB)]
+  PG["Postgres<br/>logical decoding"] -->|pgoutput| DBZ["Debezium / Kafka Connect"]
+  DBZ -->|Debezium JSON| K["Kafka Topic<br/>pg.public.customers"]
+  K --> S["PySpark Structured Streaming"]
+  S --> I["Iceberg Table<br/>local.demo.customers"]
+  I --> Q["Queries (spark-sql / Trino / DuckDB)"]
 ```
 
 ```mermaid
